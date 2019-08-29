@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>l C 声明</title>
+    <script>
+    let adim = '我是你爸爸';
+    console.log(adim);
+    let[a,b,c,d,e] = "刘岚坡很帅";
+    console.log(a,b,c,d,e);
+    let {name,sex,job} = {name:'刘岚坡',sex:'男',job:'it'};
+    console.log(name,job,sex);
+    let str = 'hhhgusennnnmklnyuhunjgodjgpiemkhpmhpfjyfgjghlrgafhfgjh1234';
+    console.log(str.startsWith('hhh'));
+    console.log(str.includes('6'));
+    let obj1 = {
+        myname:"michel",
+        mysexy:'man',
+        myage:13
+
+    }
+    let tel = `
+    <div>
+        <span>${obj1.myname}</span>
+        <span>${obj1.mysex}</span>
+        <span>${obj1.myage}</span>
+    </div>
+    `
+    console.log(tel);
+    function foo({uname,uage}={}){
+        console.log(uname,uage);
+        console.log(arguments);
+    }
+    foo({uname:'刘岚坡',uage:21});
+
+    function diaoyong(a,b,c,d,e){
+        console.log(a+b+c+d+e);
+    }
+    let arr = [1,2,3,4,5];
+    diaoyong(...arr);
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

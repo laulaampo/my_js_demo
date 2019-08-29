@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>随机学号抽取</title>
+		<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#Bbody{
+	position: absolute;
+	left: 520px;
+	top: 520px;
+}
+#btn01{
+	height: 100px;
+	width: 200px;
+	box-shadow: aliceblue;
+}			
+		</style>
+		<script type="text/javascript">
+			window.onload{
+				var Numbers = new Array(); 
+				 for(i = 0;i<6;i++){
+					 var i = Math.floor(random*(55-1)+1);
+				 };
+				 var random = new Array[];
+				 random.push(i);
+				var btn01 = document.getElementById("btn01");
+				btn01.onclick = function(){
+					alert(random);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="Bbody">
+			<button id="btn01">开始</button>
+		</div>
+
+	</body>
+</html>

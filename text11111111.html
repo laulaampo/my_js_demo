@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>视频播放</title>
+    <!--字体图标库-->
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+    <link rel="stylesheet" href="css/player.css"/>
+</head>
+<body>
+<figure>
+    <figcaption>视频播放器</figcaption>
+    <div class="player">
+        <video src="./video/fun.mp4"></video>
+        <div class="controls">
+            <!--播放/暂停-->
+            <a href="javascript:;" class="switch fa fa-play"></a>
+            <!--播放进度-->
+            <div class="progress">
+                <div class="line"></div>
+                <div class="bar"></div>
+            </div>
+            <!--当前播放时间/播放总时长-->
+            <div class="timer">
+                <span class="current">00:00:00</span> / <span class="total">00:00:00</span>
+            </div>
+            <!--全屏/取消全屏-->
+            <a href="javascript:;" class="expand fa fa-arrows-alt"></a>
+        </div>
+    </div>
+</figure>
+
+</body>
+<script src="./js/jquery-1.12.1.js"></script>
+<script>
+    $(function(){
+    // 这些方法、属性和事件允许您使用 JavaScript 来操作 <audio> 和 <video> 元素
+    // 这些api 是原生js dom的操作 我们如果使用jquery 千万别忘了转换
+    // 获取元素
+    var video = $("video").get(0);// 把jquery 对象转换为 dom对象
+    // 1. 当我们浏览器可以播放视频的时候，就让video 显示出来  让我们的时间显示出来
+    video.oncopy = function(){// oncanplay 是 video 原生事件 所以用 video dom对象
+    // oncanplay浏览器可以播放视频
+        $("vedeo").show(); // show 是jquery 方法 所以要用 jquery对象调用
+    }
+    });
+</script>
+</html>

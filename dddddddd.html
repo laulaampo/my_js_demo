@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>ggfdg</title>
+	<style>
+#fuck{
+	width: 300px;
+	height: 600px;
+	background-color: #000000;
+}
+#btn01{
+	margin: 250px auto;
+}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn01 = document.getElementById("btn01");
+			btn01.onclick = function(){
+				fuck.style.width = "600px";
+				fuck.style.height = "500px";
+				fuck.style.backgroundColor = "#ccc";
+			}
+		}
+		var w = getStyle(fuck,"width");
+		alert(w);
+		function getStyle(obj,name){
+			return window.getComputedStyle?getComputedStyle(obj.null)[name]
+		};
+	</script>
+	
+</head>
+<body>
+	<div id="fuck"></div>
+	<button id="btn01">点击变</button>
+		
+		
+		
+	
+</body>
+</html>
